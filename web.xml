@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" 
+         id="WebApp_ID" 
+         version="6.0">
+
+    <display-name>LocalEventManagementSystem</display-name>
+
+    <!-- Welcome Pages -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+    </welcome-file-list>
+
+    <!-- Admin Login Servlet -->
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>com.localevent.AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/adminLogin</url-pattern>
+    </servlet-mapping>
+
+    <!-- User Login Servlet (✅ Added Missing Entry) -->
+    <servlet>
+        <servlet-name>UserLoginServlet</servlet-name>
+        <servlet-class>com.localevent.UserLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserLoginServlet</servlet-name>
+        <url-pattern>/UserLoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Manage Events Servlet (✅ Added Missing Entry) -->
+    <servlet>
+        <servlet-name>ManageEventsServlet</servlet-name>
+        <servlet-class>com.localevent.ManageEventsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManageEventsServlet</servlet-name>
+        <url-pattern>/manageEvents</url-pattern>
+    </servlet-mapping>
+
+    <!-- View Events Servlet -->
+    <servlet>
+        <servlet-name>ViewEventsServlet</servlet-name>
+        <servlet-class>com.localevent.ViewEventsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewEventsServlet</servlet-name>
+        <url-pattern>/viewEvents</url-pattern>
+    </servlet-mapping>
+
+    <!-- Book Ticket Servlet -->
+    <servlet>
+        <servlet-name>BookTicketServlet</servlet-name>
+        <servlet-class>com.localevent.BookTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookTicketServlet</servlet-name>
+        <url-pattern>/bookTicket</url-pattern>
+    </servlet-mapping>
+
+    <!-- View Booked Tickets Servlet -->
+    <servlet>
+        <servlet-name>ViewBookedTicketsServlet</servlet-name>
+        <servlet-class>com.localevent.ViewBookedTicketsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewBookedTicketsServlet</servlet-name>
+        <url-pattern>/viewBookedTickets</url-pattern>
+    </servlet-mapping>
+
+    <!-- Logout Servlet -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.localevent.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <!-- Session Configuration -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+</web-app>
